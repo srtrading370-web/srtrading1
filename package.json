@@ -1,0 +1,27 @@
+{
+  "name": "sr-trading",
+  "version": "1.0.0",
+  "description": "S R Trading - Distributor Management Software",
+  "author": "S R Trading",
+  "main": "main.js",
+  "scripts": {
+    "electron": "electron .",
+    "dist:win": "electron-builder --win --publish never"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.1.2",
+    "@capacitor/cli": "6.1.2",
+    "@capacitor/core": "6.1.2"
+  },
+  "devDependencies": {
+    "electron": "31.7.7",
+    "electron-builder": "24.13.3"
+  },
+  "build": {
+    "appId": "com.srtrading.app",
+    "productName": "S R Trading",
+    "files": ["main.js", "www/**/*"],
+    "win": { "target": "nsis", "icon": "www/icons/icon-512.png" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}
